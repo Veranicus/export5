@@ -1,0 +1,199 @@
+body {
+	
+	font-family: 'PT Serif', serif;
+}
+
+@page { 
+	width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    
+    @top-center {
+    	content: element(pageHeader);
+    }
+    @bottom-center {
+    	content: element(pageFooter);
+   	}
+}
+
+#pageHeader {
+	<#-- there is statically sized logo in the header- thus when modifying height, you need to 
+	alter the image's margin-top as well (to be centered); -->
+	
+	height: 50px;
+	background-color: #0065A0;
+	color: #FFFFFF;
+	align-items: center;
+	text-align: center;
+	position: running(pageHeader);
+}
+#pageFooter {
+	height: 50px;
+	background-color: #ffffff;		
+	position: running(pageFooter);
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;	
+}
+
+#logo {
+	float: left;
+	margin-top: 17px;
+	margin-left: 15px; 
+}
+#title {
+	float: right;
+	width: 40%;
+	text-align: center;
+	vertical-align:middle; 
+	line-height: 50px; 
+	
+	font-weight: bold;
+	font-size: large;
+}
+#username {
+	float: right;
+	width: 30%; 
+	text-align:right; 
+	margin-right: 15px;
+	line-height: 50px; 
+	
+	vertical-align:middle;
+	font-size: large;
+}
+
+#copyright {
+	float:left; 
+	text-align:left;
+	vertical-align:middle;
+	line-height: 50px; 
+	width:30%; 
+	margin-left: 15px; 
+	color:black;
+}
+
+
+
+#date {
+	float:right;
+	width:30%;
+	text-align:right;
+	vertical-align:middle;
+	line-height: 50px;
+	color:black; 
+	margin-right: 15px;
+}
+
+.media {
+	float: left;
+	padding-left: 0;
+	margin-right: 3px;
+	
+	width: 24px;
+	height: 24px;
+}
+
+#userInfo {
+	margin-left: 0px;
+	margin-bottom: 20px;
+	display: block;
+	color: rgba(0,0,0,0.87) !important;
+}
+#userInfo .leftCol {
+	padding-right: 12px;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+}
+#userInfo .rightCol {
+	padding-left: 5px;
+	word-wrap: break-word;
+}
+#userInfo .highlight {
+	font-size: 2em;
+	font-weight: bold;
+}
+#userInfo .normal {
+}
+
+#wrapper {
+	width: 80%;
+	margin-left: 10%;
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+.dontBreak {
+	page-break-inside: avoid;
+}
+.breakable {
+	page-break-inside: auto;
+}
+.nonBreakLine {
+	white-space: nowrap;
+}
+
+#structure-component {}
+
+#structure-component .titleLine {
+	page-break-inside: avoid;
+	line-height: 26px;
+	vertical-align: middle;
+}
+#structure-component .title {
+	font-weight: bold;
+}
+
+#structure-component .company {
+	line-height: 26px;
+	padding-top: 4px;
+	padding-bottom: 10px;
+	page-break-before: always;
+}
+
+#structure-component .project {
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+#structure-component .serverGroup {
+	padding-left: 35px;
+}
+
+#structure-component .server {
+	padding-left: 15px;
+}
+
+#structure-component .serverInfo {
+	padding-left: 30px;
+	line-height: 20px;
+	vertical-align: center;
+	word-wrap: break-word;
+}
+
+.serverInfo .auth {
+	width: 40em;
+}
+
+.serverInfo .auth .leftCol {
+	width: 11em;
+}
+
+#structure-component .saasEntities {
+	padding-left: 30px;
+	line-height: 20px;
+	vertical-align: center;
+	page-break-inside: auto;
+}
+.saasEntities .entity {
+	padding-left: 20px;
+}
+.saasEntities .entity .leftCol {
+	width: 10em;
+}
+
+#structure-component .roles {
+    color: rgba(0,0,0,0.54);
+    padding-left: 30px;
+}
